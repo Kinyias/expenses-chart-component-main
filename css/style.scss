@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+$cyan: hsl(186, 34%, 60%);
+$soft-red:hsl(10, 79%, 65%);
+$dark-brown:hsl(25, 47%, 15%);
+$medium-brown:hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$very-pale-orgrane:hsl(33, 100%, 98%);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    font-family:'DM Sans', sans-serif;
+    color: $dark-brown;
+    min-height: 100vh;
+    background-color: $cream;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chart-top{
+    background-color: $soft-red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 18px;
+    margin-bottom: 1rem;
+    &-left{
+        p{
+            color: #ffff;
+        }
+        h1{
+            color: #ffff;
+            font-weight: 700;
+        }
+    }
+}
+.chart-bottom{
+    background-color: $very-pale-orgrane;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    .chart-box{
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        align-items: flex-end;
+        button{      
+            outline:none;
+            background-color: $very-pale-orgrane;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            .chart-box-expenses{
+                background-color: $soft-red;
+                height: 10rem;
+                margin: 0 0.3rem;
+                // width: 3rem;
+                border-radius: 5px;
+                transition: .3s;
+            }
+            .chart-box-text{
+                font-size: 1.2rem;
+                color: $medium-brown;
+            }
+        }
+        &-amount{
+            background-color: $dark-brown;
+            color:$very-pale-orgrane;
+            padding: .5rem;
+            border-radius: .4rem;
+            position: absolute;
+            top: -3rem;
+            opacity: 0;
+            transition: .3s;
+        }
+    }
+    &-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .left{
+            p{
+                color: $medium-brown;
+            }
+        }
+        .right{
+            .percentage{
+                font-weight: 700;
+                text-align: end;
+            }
+            .last-month{
+                color: $medium-brown;
+            }
+        }
+    }
+}
+.hr{
+    height: 2px;
+    background-color: $medium-brown;
+    opacity: .2;
+    margin: 2rem 0;
+}
+.cyan{
+    background-color: $cyan!important;
+}
+.relative{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.relative:hover .chart-box-amount{
+    opacity: 1;
+}
+.relative:hover .chart-box-expenses{
+    opacity: .5;
+}
+@media(max-width: 1023px) {
+    body{
+        font-size: 14px;
+    }
+    .chart-top{
+        padding: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .chart-bottom{
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+}   

@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  color: hsl(25deg, 47%, 15%);
+  min-height: 100vh;
+  background-color: hsl(27deg, 66%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-top {
+  background-color: hsl(10deg, 79%, 65%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+}
+.chart-top-left p {
+  color: white;
+}
+.chart-top-left h1 {
+  color: white;
+  font-weight: 700;
+}
+
+.chart-bottom {
+  background-color: hsl(33deg, 100%, 98%);
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+.chart-bottom .chart-box {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: flex-end;
+}
+.chart-bottom .chart-box button {
+  outline: none;
+  background-color: hsl(33deg, 100%, 98%);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.chart-bottom .chart-box button .chart-box-expenses {
+  background-color: hsl(10deg, 79%, 65%);
+  height: 10rem;
+  margin: 0 0.3rem;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.chart-bottom .chart-box button .chart-box-text {
+  font-size: 1.2rem;
+  color: hsl(28deg, 10%, 53%);
+}
+.chart-bottom .chart-box-amount {
+  background-color: hsl(25deg, 47%, 15%);
+  color: hsl(33deg, 100%, 98%);
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  position: absolute;
+  top: -3rem;
+  opacity: 0;
+  transition: 0.3s;
+}
+.chart-bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.chart-bottom-section .left p {
+  color: hsl(28deg, 10%, 53%);
+}
+.chart-bottom-section .right .percentage {
+  font-weight: 700;
+  text-align: end;
+}
+.chart-bottom-section .right .last-month {
+  color: hsl(28deg, 10%, 53%);
+}
+
+.hr {
+  height: 2px;
+  background-color: hsl(28deg, 10%, 53%);
+  opacity: 0.2;
+  margin: 2rem 0;
+}
+
+.cyan {
+  background-color: hsl(186deg, 34%, 60%) !important;
+}
+
+.relative {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.relative:hover .chart-box-amount {
+  opacity: 1;
+}
+
+.relative:hover .chart-box-expenses {
+  opacity: 0.5;
+}
+
+@media (max-width: 1023px) {
+  body {
+    font-size: 14px;
+  }
+
+  .chart-top {
+    padding: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .chart-bottom {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
