@@ -71,6 +71,7 @@ body {
   top: -3rem;
   opacity: 0;
   transition: 0.3s;
+  z-index: 100;
 }
 .chart-bottom-section {
   display: flex;
