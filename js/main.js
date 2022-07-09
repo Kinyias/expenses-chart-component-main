@@ -3,7 +3,7 @@ var heightChart =0;
 //Get Current Day and render
 const currentDay = (items) => {
   const today = new Date().getDay();
-  const allDay = ['mon','tue','wed','thu','fri','sat','sun'];
+  const allDay = ['sun','mon','tue','wed','thu','fri','sat'];
   return allDay[today]===items.day;
 }
 //Generate Height Chart
